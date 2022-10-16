@@ -29,7 +29,7 @@ export async function main(_ns) {
         if (ns.hasRootAccess(t) == true) {
             ns.installBackdoor("home")
             
-            ns.tprint("worked?")
+            ns.tprint("worked?");
 
 
             if(ns.installBackdoor == false) {
