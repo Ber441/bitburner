@@ -1,15 +1,14 @@
 /** @type import(".").NS */
-/** @type import("./functions.js").FN */
-let ns = null;
 
+let ns = null;
 
 
 export async function main(_ns) {
    ns = _ns;
 
-const c = ns.args[0];
-const h = c.toString.call(c);
-var p = ns.getServerNumPortsRequired(h);
+   const c = ns.args[0];
+   const h = c.toString.call(c);
+   var p = ns.getServerNumPortsRequired(h);
 
 async function ssh(target) { 
    if(ns.fileExists("BruteSSH.exe", "home")) {
@@ -45,7 +44,10 @@ async function backdoor(target) {
    ns.tprint("Backdoor Ready");
    ns.tprint("Done");
 };
+
+
 async function msg() {ns.tprint("Hostname: " + h + " : " + "Ports: " + p); }
+
 ns.tprint("testing hostname: " + h) 
  if (ns.hasRootAccess(h) == false) {
         ns.tprint("I have no access")

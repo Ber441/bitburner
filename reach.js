@@ -21,10 +21,7 @@ export async function main(_ns) {
     //const 5 = [,'galactic-cyber','aerocorp','omnia','icarus','deltaone','solaris','defcomm','infocomm','zeus-med','taiyang-digital','zb-institute','darkweb','titan-labs','helios','vitalife','4sigma','kuai-gong','omnitek','nwo','powerhouse-fitness','megacorp','stormtech','microdyne','fulcrumtech','b-and-a','blade','clarkinc','ecorp','fulcrumassets','The-Cave','w0r1d_d43m0n'];
 
     const s = mainlist.length;
-    const number1 = 1
-
     
-
     for (var i= 0; i<s; i++) {
         const t = mainlist[i];
         const m = ns.getServerMaxRam(t);
@@ -42,7 +39,6 @@ export async function main(_ns) {
         //ns.write("hostnames.script", "\n" + "Hostname: " + t + "\n" + "Hackskill Required: " + rhl + "\n" + "Hackskill of Home: " + hl + "\n" + "Hacklevel tested: " + tested + "\n" + "connect " + t);
         if(ns.hasRootAccess(t) == true) {
             ns.tprint("RootAccess: "+ "true");
-            
             if (m > "0") {
                 ns.scp("prim.js", t);
                 ns.tprint("Copied");
@@ -53,7 +49,7 @@ export async function main(_ns) {
             } 
         } else {
             ns.tprint("RootAccess: "+"false")
-            ns.exec("hack.js" , "home", Number(number1) ,t);
+            ns.exec("hack.js" , "home", 1,t);
             ns.tprint("Hacking server: " + t);
             if (m > "0") {
                 ns.tprint("Apply Script and Start Hacking");

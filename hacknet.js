@@ -14,6 +14,7 @@ export async function main(_ns) {
     var hm = ns.getServerMoneyAvailable("home");
     var nc = ns.hacknet.numNodes();
     
+    ns.grafting.
 
     ns.tprint(c);
     ns.tprint(sc);
@@ -21,6 +22,7 @@ export async function main(_ns) {
     if (hm >= sc) {
         for(var i=0;i<c+1;i++) {
             ns.hacknet.purchaseNode()
+            
             ns.tprint("purchased")
             ns.tprint(nc);
 
