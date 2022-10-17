@@ -28,10 +28,6 @@ global-pharm 844
 computek 391
 syscore 619
 
-//needs ports
-darkweb 1
-
-
 
 //backdoored
 noodles
@@ -54,3 +50,4 @@ johnson-ortho
 i.i.i.i
 avmnite-02h
 iron-gym
+darkweb 

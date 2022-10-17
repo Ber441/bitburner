@@ -17,13 +17,15 @@ export async function main(_ns) {
 
     ns.tprint(c);
     ns.tprint(sc* c);
-    ns.tprint(hm >= sc)
+    ns.tprint(hm >= sc);
+    ns.tprint(nc);
+    
     if (hm >= cmb) {
         for(var i=0;i<c+1;i++) {
             ns.hacknet.purchaseNode()
             
             ns.tprint("purchased")
-            ns.tprint(nc);
+           // ns.tprint(nc);
 
         }
     } else {
