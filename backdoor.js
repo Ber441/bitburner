@@ -25,10 +25,13 @@ export async function main(_ns) {
            
             //ns.getServer.installBackdoor(t);
             // Source-File 4 to run 
-            ns.singularity.installBackdoor(t)
+            
+           
+           //var print = ns.bladeburner.getCity()
+           //ns.tprint(print);
 
             
-            ns.tprint("worked?")
+            //ns.tprint("worked?")
             //if(ns.installBackdoor == false) {
                 //ns.write("backdoor.script", "\n" + "connect " + t, "w");
                 //ns.tprint("Writen"); 
