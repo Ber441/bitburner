@@ -11,15 +11,14 @@ export async function main(_ns) {
     //var sc = ns.getPurchasedServerCost;
     //var hm = ns.getServerMaxRam("home");
     var sc = ns.hacknet.getPurchaseNodeCost();
+    var cmb = sc * c;
     var hm = ns.getServerMoneyAvailable("home");
     var nc = ns.hacknet.numNodes();
-    
-    ns.grafting.
 
     ns.tprint(c);
-    ns.tprint(sc);
+    ns.tprint(sc* c);
     ns.tprint(hm >= sc)
-    if (hm >= sc) {
+    if (hm >= cmb) {
         for(var i=0;i<c+1;i++) {
             ns.hacknet.purchaseNode()
             

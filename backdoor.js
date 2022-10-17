@@ -22,18 +22,19 @@ export async function main(_ns) {
         ns.tprint("Backdoor: " + t);
         //ns.installBackdoor()
         if (ns.hasRootAccess(t) == true) {
-            ns.installBackdoor("home")
+           
+            //ns.getServer.installBackdoor(t);
+            // Source-File 4 to run 
+            ns.singularity.installBackdoor(t)
+
             
-            ns.tprint("worked?");
-
-
-            if(ns.installBackdoor == false) {
-                ns.write("backdoor.script", "\n" + "connect " + t, "w");
-                ns.tprint("Writen"); 
-            }
+            ns.tprint("worked?")
+            //if(ns.installBackdoor == false) {
+                //ns.write("backdoor.script", "\n" + "connect " + t, "w");
+                //ns.tprint("Writen"); 
+            //}
     
         }
-
 
     }
 
