@@ -39,6 +39,7 @@ export async function main(_ns) {
       } 
    };
    async function backdoor(target) { 
+      // find Source file -4 to use
       //ns.singularity.installBackdoor(target)
       ns.tprint("Backdoor Ready");
       ns.tprint("Done");
