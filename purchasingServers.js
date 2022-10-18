@@ -4,38 +4,30 @@ let ns = null;
 export async function main(_ns) {
     ns = _ns;
 
-    const mainlist = [/*0 */'n00dles','foodnstuff','sigma-cosmetics','joesguns','hong-fang-tea','nectar-net','harakiri-sushi'
-    /*1 */ ,'max-hardware','neo-net','CSEC','iron-gym','zer0'
-    /*2 */,'johnson-ortho','silver-helix','avmnite-02h','omega-net','crush-fitness','phantasy','the-hub'
-    /*3 */,'summit-uni','rho-construction','millenium-fitness','I.I.I.I','rothman-uni','catalyst','computek'
-    /*4 */,'syscore','global-pharm','nova-med','univ-energy','zb-def','unitalife','lexo-corp','snap-fitness','alpha-ent','aevum-police','applied-energetics','run4theh111z','.'
-    /*5 */,'galactic-cyber','aerocorp','omnia','icarus','deltaone','solaris','defcomm','infocomm','zeus-med','taiyang-digital','zb-institute','darkweb','titan-labs','helios','vitalife','4sigma','kuai-gong','omnitek','nwo','powerhouse-fitness','megacorp','stormtech','microdyne','fulcrumtech','b-and-a','blade','clarkinc','ecorp','fulcrumassets','The-Cave','w0r1d_d43m0n'];
-    
     var servermax = 1048576
     var cost = ns.getPurchasedServerCost(servermax)
     var home = ns.getServerMoneyAvailable("home")
 
-    ns.tprint(cost)
-    ns.tprint(home)
-    var cmb = (cost > home)
+    ns.tprint("Cost: "+ cost)
+    ns.tprint("Home: " + home)
+    var cmb = (home >= cost )
     ns.tprint(cmb)
-
-
-
-
+    const programs = ["BruteSSH.exe", "FTPCrack.exe", "relaySMTP.exe", "HTTPWorm.exe", "SQLInject.exe","NUKE.exe"]
     for(var i= 0; i> 25; i++ ) {
-
+        var serverss = "server" + i
         if (cmb) {
-            ns.purchaseServer("server"+ i, servermax)
-            
-            ns.scp("prim.js",)
+            ns.purchaseServer(serverss, servermax)
+            for(j=0;j<p.length;j++) {
+                ns.scp(programs[j], serverss)
+
+            }
+            ns.scp("prim.js", serverss)
+            ns.scp("hack.js", serverss)
+            ns.scp("reach.js", serverss)
+            ns.exec("reach.js", serverss)
         } 
 
-
     }
-
-
-
 
 }
 

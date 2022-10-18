@@ -45,7 +45,7 @@ export async function main(_ns) {
       ns.tprint("Done");
    };
 
-   async function msg() {ns.tprint("Hostname: " + h + " : " + "Ports: " + p); }
+   async function msg() {await ns.tprint("Hostname: " + h + " : " + "Ports: " + p); }
    
    if (ns.hasRootAccess(h) == false) {
          ns.tprint("Hacking in Progress.." + h)
@@ -94,5 +94,5 @@ export async function main(_ns) {
                      nuker(h);
                      backdoor(h);
                   }
-         } else { ns.tprint("I have access"); }
+         }
 }

@@ -10,7 +10,7 @@ export async function main(_ns) {
     //figure out how my money i need to buy the hacks
     //then buy hacks
 
-    const programs = ["BruteSSH.exe", "FTPCrack.exe", "relaySMTP.exe", "HTTPWorm.exe", "SQLInject.exe"]
+    const programs = ["BruteSSH.exe", "FTPCrack.exe", "relaySMTP.exe", "HTTPWorm.exe", "SQLInject.exe","NUKE.exe"]
     const s = programs.length;
     const pus = [];
     
