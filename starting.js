@@ -21,6 +21,7 @@ export async function main(_ns) {
 
     ns.singularity.purchaseTor()
     
+
     for (var i= 0; i<s; i++) {
         const p = programs[i]
         pus.push(ns.singularity.getDarkwebProgramCost(p))

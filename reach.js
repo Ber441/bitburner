@@ -37,6 +37,7 @@ export async function main(_ns) {
         //ns.tprint("Formulas value: " + f);
 
         //ns.write("hostnames.script", "\n" + "Hostname: " + t + "\n" + "Hackskill Required: " + rhl + "\n" + "Hackskill of Home: " + hl + "\n" + "Hacklevel tested: " + tested + "\n" + "connect " + t);
+        
         if(ns.hasRootAccess(t) == true) {
             ns.tprint("RootAccess: "+ "true");
             if (m > "0") {

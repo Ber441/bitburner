@@ -14,6 +14,23 @@ export async function main(_ns) {
 
         const s = mainlist.length;
     
+        var temp = ns.serverExists("home");
+        ns.tprint(temp);
+
+
+        //&& 
+        ns.purchaseServer
+
+        if(!ns.serverExists("home")) {
+
+            ns.tprint("Worked")
+
+        } else {
+
+            ns.tprint("Continue")
+
+        }
+
         for (var i= 0; i<s; i++) {
 
             const t = mainlist[i];
@@ -21,6 +38,7 @@ export async function main(_ns) {
 
             ns.write("info.txt","Hostname: " + t + "\n" + "Hackskill Required: " + rhl + "\n", "a");
 
+            
         }
 
-}
+} 
