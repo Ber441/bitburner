@@ -7,34 +7,36 @@ export async function main(_ns) {
    const c = ns.args[0];
    const h = c.toString.call(c);
    var p = ns.getServerNumPortsRequired(h);
+   var servername = ns.getHostname()
+
 
    async function ssh(target) { 
-      if(ns.fileExists("BruteSSH.exe", "home")) {
+      if(ns.fileExists("BruteSSH.exe", servername)) {
          await ns.brutessh(target);
       } 
    };
    async function ftp(target) { 
-      if(ns.fileExists("FTPCrack.exe", "home")) {
+      if(ns.fileExists("FTPCrack.exe", servername)) {
          await ns.ftpcrack(target);
       }
    };
    async function smtp(target) {
-      if(ns.fileExists("relaySMTP.exe", "home")) {
+      if(ns.fileExists("relaySMTP.exe", servername)) {
          await ns.relaysmtp(target);
       } 
    };
    async function http(target) {
-      if(ns.fileExists("HTTPWorm.exe", "home")) {
+      if(ns.fileExists("HTTPWorm.exe", servername)) {
          await ns.httpworm(target);
       }
    };
    async function sql(target) {
-      if(ns.fileExists("SQLInject.exe","home")) {
+      if(ns.fileExists("SQLInject.exe",servername)) {
          await ns.sqlinject(target);
       }
    };
    async function nuker(target) {
-      if(ns.fileExists("NUKE.exe", "home")) { 
+      if(ns.fileExists("NUKE.exe", servername)) { 
          await ns.nuke(target); 
       } 
    };

@@ -40,28 +40,21 @@ export async function main(_ns) {
         if(ns.hasRootAccess(t) == true) {
             ns.tprint("RootAccess: "+ "true");
             if (m > "0") {
-                ns.scp("prim.js", t);
+                ns.scp("prim.js", servername);
                 await ns.tprint("Copied");
-                await ns.exec("prim.js", t, Number(f), t);
-                ns.exec("prim.js", servername, Number(f), t);
+                ns.exec("prim.js", servername, Number(f), mainlist[i]);
                 await ns.tprint("Applied Script and Started Hacking");
             } 
         } else {
             ns.tprint("RootAccess: "+"false")
-            await ns.exec("hack.js" , t, 1,t);
-            ns.exec("hack.js" , servername, 1,t);
+            ns.exec("hack.js" , servername, 1, mainlist[i]);
             ns.tprint("Hacking server: " + t);
             if (m > "0") {
                 ns.tprint("Apply Script and Start Hacking");
-                ns.scp("prim.js", t);
-                await ns.exec("prim.js", t, Number(f), t);
-                ns.exec("prim.js", servername, Number(f), t);
+                ns.scp("prim.js", servername);
+                ns.exec("prim.js", servername, Number(f), mainlist[i]);
                 
             }
         }
     }
 }
-
-
-
-
